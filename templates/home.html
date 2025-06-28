@@ -1,0 +1,15 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% block title %}Home | MindMate{% endblock %}
+
+{% block content %}
+<div class="text-center mt-5">
+  <h1 class="display-5 fw-bold text-secondary">Welcome to MindMate 🌿</h1>
+  <p class="lead text-muted mt-3">Your safe space to chat, journal, and track your mental well-being.</p>
+  
+  <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mt-4">
+    <a href="/chat" class="btn btn-primary btn-lg">Talk to MindMate</a>
+    <a href="/journal" class="btn btn-outline-secondary btn-lg">Write Journal</a>
+  </div>
+</div>
+{% endblock %}
