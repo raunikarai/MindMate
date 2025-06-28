@@ -1,10 +1,13 @@
+import os
 from flask_sqlalchemy import SQLAlchemy
+from dotenv import load_dotenv
 
+load_dotenv()
 
 db = SQLAlchemy()
 
 def init_db(app):
-  app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:MSsbRqbNKmEWrvEVNbaLmeTZmyDNAkMz@centerbeam.proxy.rlwy.net:18566/mindmate'
+  app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_CONNECTION_STRING')
   app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
   db.init_app(app)
